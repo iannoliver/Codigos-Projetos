@@ -1,1 +1,1 @@
-Atividades/codigos da FMU e do Senac(sujeita a mudança)
+Atividades/códigos da FMU e do Senac(sujeita a mudança)
