@@ -7,12 +7,15 @@ Segunda etapa.: Acessar o repositório senactat no Github do Vaamonde
 Terceira etapa: No diretório: documentacao baixar a Planilha de: 01-PlanilhaSimplesDeCalculoDePrestacaoDeServico.xls
 
 Quarta etapa..: CRIAÇÃO DA SUA EMPRESA.
-				CRIAR O NOME DA SUA EMPRESA; 
-				CRIAR O NOME FANTASIA DA SUA EMPRESA; 
-				SLOGAN DA SUA EMPRESA; ""
-				LOCALIZAÇÃO DA SUA EMPRESA; "Chez Moi"
-				DETERMINAÇÃO DA SUA HORA TÉCNICA; 8H
+				CRIAR O NOME DA SUA EMPRESA: Oblivion Systems 
+				CRIAR O NOME FANTASIA DA SUA EMPRESA: OSYS
+				SLOGAN DA SUA EMPRESA: "Doing your business better"
+				LOCALIZAÇÃO DA SUA EMPRESA: "Carimã"
+				DETERMINAÇÃO DA SUA HORA TÉCNICA: 22H
 				
 				PESQUISAR:  VALOR HORA TÉCNICA / 50R$
-							VALOR PRESTAÇÃO DE SERVIÇO / 300R$ 
-							VALOR PROJETO (TEMPO) / 
+							VALOR PRESTAÇÃO DE SERVIÇO / 100R$ 
+							VALOR PROJETO (TEMPO) / 1000R$
+							
+
+
