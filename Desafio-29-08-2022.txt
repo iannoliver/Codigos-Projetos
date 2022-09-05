@@ -7,14 +7,18 @@
 				VALOR HORA TÉCNICA / 70R$ 
 							VALOR PRESTAÇÃO DE SERVIÇO / 5.350R$ 
 							LICENÇA WINDOWS / 31.980R$
-              PACOTE OFFICE / 1.600R$ 
-              PACOTE ANITVIRUS / 239,9R$
-              TOTAL / 39.169R$
+                                                        PACOTE OFFICE / 1.600R$ 
+                                                        PACOTE ANITVIRUS / 239,9R$
+                                                        TOTAL / 39.169R$
 ------------------------------------------------------------------- ' ' -------------------------------------------------------------------------
-ClIENTE: * UNIVERSIDADE SABER *
-SERVIÇO: * MONTAGEM DE UMA NOVA INFRAESTRUTURA DE TI + ADICIONAIS *
-*MÃO DE OBRA DETALHADA / ORÇAMENTO / TEMPO:(MÃO DE OBRA PARA DESKTOP) 
--Backup dos arquivos, armazenados na nuvem ou hd externo - 80R$ a hora - tempo de duração média variável de acordo com a quantidade de arquivos: 3h a 5h, com os procedimentos feitos simultaneamente nas 20x máquinas
+ClIENTE: * PROCEDIMENTOS EM TI *
+SERVIÇO: * MIGRAÇÃO DE DESKTOPS + ADICIONAIS *
+*MÃO DE OBRA DETALHADA / ORÇAMENTO / TEMPO:
+-Manutenção preventiva completa de hardware - 50R$ por máquina(totalizando 1000R$) - duração de 4 dias
+
+-Backup dos arquivos, armazenados na nuvem ou hd externo - 70R$ a hora - tempo de duração média variável de acordo com a quantidade de arquivos: 3h a 5h, com os procedimentos feitos simultaneamente nas 20x máquinas
+
+-Formatação e Instalação dos Sistemas Operacionais nas máquinas - 150R$ a mão de obra por máquina - 3000R$ total - 2 dias 
 
 -Configuração do Office e Antivirus - 50R$ por maquina - 1000R$ total
 
