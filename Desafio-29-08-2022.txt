@@ -1,58 +1,12 @@
-Objetivo da atividade de hoje: 29/08/2022
-
-Primeira etapa: Orçamento: Como compor um valor de Prestação de Serviço em Informática
-
-Segunda etapa.: Acessar o repositório senactat no Github do Vaamonde
-
-Terceira etapa: No diretório: documentacao baixar a Planilha de: 01-PlanilhaSimplesDeCalculoDePrestacaoDeServico.xls
-
-Quarta etapa..: CRIAÇÃO DA SUA EMPRESA.
-				CRIAR O NOME DA SUA EMPRESA: Oblivion Systems 
-				CRIAR O NOME FANTASIA DA SUA EMPRESA: OSYS
-				SLOGAN DA SUA EMPRESA: "Doing your business better"
-				LOCALIZAÇÃO DA SUA EMPRESA: "Vila Prudente - Carimâ"
-				DETERMINAÇÃO DA SUA HORA TÉCNICA: 8H - 18H
-				
-				PESQUISAR:  VALOR HORA TÉCNICA / 70R$
-							VALOR PRESTAÇÃO DE SERVIÇO / 5.350R$ 
-							LICENÇA WINDOWS / 31.980R$
-							PACOTE OFFICE / 1.600R$
-							PACOTE ANTIVIRUS / 239,8R$
-                                                        TOTAL / 39.169,8
------------------------------------------------------------------------''  ''-------------------------------------------------------------------------------------------
-
-ClIENTE: * PROCEDIMENTOS EM TI *
-SERVIÇO: * MIGRAÇÃO DE DESKTOP EM 20 MÁQUINAS E ATUALIZAÇÃO DE SISTEMA OPERACIONAL + ADICIONAIS *
-MÃO DE OBRA DETALHADA / ORÇAMENTO / TEMPO: 
--Manutenção Preventiva completa de Hardware - 50R$ por máquina(totalizando 1000R$) - Duração de 4 dias 
-
--Backup dos arquivos já existentes antes da formatação, armazenados na nuvem ou hd externo - 70R$ a hora - tempo de duração média variável de acordo com a quantidade de arquivos: 3h a 5h, com os procedimentos feitos simultaneamente nas 20x máquinas 
-
--Formatação e Instalação dos Sistemas Operacionais nas máquinas  - 150R$ a mão de obra por máquina - 3.000R$ total - 2 dias
-
-+ licença Windows 10 Pro - Pacote por unidade Desktop 1.599R$ - 31.980R$
-https://www.microsoft.com/pt-br/d/windows-10-pro/df77x4d43rkt/48dn?rtc=1&activetab=pivot%3aoverviewtab
-
--Configuração do Office e Antivirus - 50R$ por maquina - 1000R$
-
-+ Pacote Office - 80R$ por máquina - 1.600R$ total
-https://signup.microsoft.com/get-started/signup?products=cfq7ttc0k5j7:0004&mproducts=CFQ7TTC0LDPB:0001&term=P1Y&fmproducts=CFQ7TTC0LDPB:0001&culture=pt-br&country=BR&ali=1
-
-+ Antivirus Kaspery Pacote - 5 PCs por 1 ano (4x maquina) - 239,8R$ total
-https://cart.kaspersky.com.br/checkout/add?cartid=7760dde5-cd6c-48bd-82f4-c7049ce1fac7&irclickid=0MwUGN2tXxyNUYD3vyR5h1y%3AUkDRns0P70tTSM0&mktop=PR0049735&om-site-id=pt-br&spage=product__antivirus&src=PR0049735&typnews=br_impactbr_acq_ona_afm__onl_b2c__banner_______
-
-*Garantia de 3 meses*
-Obs: A garantia não cobre queda, mal uso, nem danos naturais!!
-
 ------------------------------------------------------------------ ' ' -------------------------------------------------------------------------------------
 
 CRIAR O NOME DA SUA EMPRESA: Oblivion Systems 
-				CRIAR O NOME FANTASIA DA SUA EMPRESA: OSYS
-				SLOGAN DA SUA EMPRESA: "Doing your business better"
-				LOCALIZAÇÃO DA SUA EMPRESA: "Vila Prudente - Carimâ"
-				DETERMINAÇÃO DA SUA HORA TÉCNICA: 8H - 18H
+				NOME FANTASIA DA  EMPRESA: OSYS
+				SLOGAN DA EMPRESA: "Doing your business better"
+				LOCALIZAÇÃO DA EMPRESA: "Vila Prudente - Carimâ"
+				DETERMINAÇÃO DA HORA TÉCNICA: 8H - 18H
 				
-				PESQUISAR:  VALOR HORA TÉCNICA / 70R$
+				VALOR HORA TÉCNICA / 70R$
 				                        VALOR PROJETO (TEMPO) / 
 							VALOR PRESTAÇÃO DE SERVIÇO / 5.350R$ 
 							LICENÇA WINDOWS / 31.980R$
@@ -70,5 +24,36 @@ SERVIÇO: * MONTAGEM DE UMA NOVA INFRAESTRUTURA DE TI + ADICIONAIS *
 -LOGO AO LADO, A SALA DA DIREÇÃO SERIAM ALOCADOS OS 4X NOTEBOOKS EMPRESARIAIS PARA OS DIRETORES E MANTENEDORES, COM 1X NA BANCADA EM FRENTE A PORTA DO DIRETOR PRINCIPAL, E 3 NAS MESAS AO REDOR DOS OUTROS FUNCIONÁRIOS AOS CANTOS DA SALA.
 - NAS DUAS SALAS AO LADO(DPTO.FINANCEIRO E ALMOXARIFADO/RH) SERIAM 3X DESKTOP PARA 3X FUNCIONÁRIOS NO FINANCEIRO, E MAIS 4X DESKTOPS NA SALA DO ALMOXARIFADO + UMA IMPRESSORA LASERJET PARA OS FUNCIONÁRIOS ADMINSITRATIVOS COMO UM TODO PERTO/AO LADO DA PORTA DE ENTRADA.
 
-*MÃO DE OBRA DETALHADA / ORÇAMENTO / TEMPO: 
--
+*PCs A SER ALOCADOS:
+"Computador Completo Easypc All Intel Core I5 8GB, SSD 240GB, Microsoft Windows 10 E Office 365(DEGUSTAÇÃO), Monitor 19.5"
+https://www.kabum.com.br/produto/374927/computador-completo-easypc-all-intel-core-i5-8gb-ssd-240gb-microsoft-windows-10-e-office-365-monitor-19-5-
+
+*NOTEBOOKs A SER ALOCADOS:
+"Notebook Asus AMD Ryzen 5-3500U, 8GB RAM, SSD 256GB, 15,6', Radeon Vega 8, Windows 11 Home, Cinza - M515DA-BR1213W"
+https://www.kabum.com.br/produto/334039/notebook-asus-amd-ryzen-5-3500u-8gb-ram-ssd-256gb-15-6-radeon-vega-8-windows-11-home-cinza-m515da-br1213w
+
+*MÃO DE OBRA DETALHADA / ORÇAMENTO / TEMPO:(MÃO DE OBRA PARA DESKTOP) 
+-Backup dos arquivos, armazenados na nuvem ou hd externo - 70R$ a hora - tempo de duração média variável de acordo com a quantidade de arquivos: 3h a 5h, com os procedimentos feitos simultaneamente nas 20x máquinas
+
+-Configuração do Office e Antivirus - 50R$ por maquina - 1000R$ total
+
++ Pacote Office - 80R$ por máquina - 1.600R$ total
+https://signup.microsoft.com/get-started/signup?products=cfq7ttc0k5j7:0004&mproducts=CFQ7TTC0LDPB:0001&term=P1Y&fmproducts=CFQ7TTC0LDPB:0001&culture=pt-br&country=BR&ali=1
+
++ Antivirus Kaspery Pacote - 59,95 - 5 PCs por 1 ano (4x maquina) - 239,8R$ total
+https://cart.kaspersky.com.br/checkout/add?cartid=7760dde5-cd6c-48bd-82f4-c7049ce1fac7&irclickid=0MwUGN2tXxyNUYD3vyR5h1y%3AUkDRns0P70tTSM0&mktop=PR0049735&om-site-id=pt-br&spage=product__antivirus&src=PR0049735&typnews=br_impactbr_acq_ona_afm__onl_b2c__banner_______
+
+*MÃO DE OBRA DETALHADA / ORÇAMENTO / TEMPO:(MÃO DE OBRA PARA NOTEBOOK)
+-Backup dos arquivos, armazenados na nuvem ou hd externo - 70R$ a hora - tempo de duração média variável de acordo com a quantidade de arquivos: 3h a 5h, com os procedimentos feitos simultaneamente nas 4x máquinas
+
+-Configuração do Office e Antivirus - 50R$ por maquina - 200R$ total
+
++ Pacote Office - 80R$ por máquina - 320R$ total
+https://signup.microsoft.com/get-started/signup?products=cfq7ttc0k5j7:0004&mproducts=CFQ7TTC0LDPB:0001&term=P1Y&fmproducts=CFQ7TTC0LDPB:0001&culture=pt-br&country=BR&ali=1
+
++ Antivirus Kaspery Pacote - 59,95 - 5 PCs por 1 ano (2x maquina) - 119,9R$ total
+https://cart.kaspersky.com.br/checkout/add?cartid=7760dde5-cd6c-48bd-82f4-c7049ce1fac7&irclickid=0MwUGN2tXxyNUYD3vyR5h1y%3AUkDRns0P70tTSM0&mktop=PR0049735&om-site-id=pt-br&spage=product__antivirus&src=PR0049735&typnews=br_impactbr_acq_ona_afm__onl_b2c__banner_______
+
+* DURAÇÃO DO PROJETO: 5 DIAS (8H - 18H)
+*Garantia de 3 meses*
+Obs: A garantia não cobre queda, mal uso, nem danos naturais!!
