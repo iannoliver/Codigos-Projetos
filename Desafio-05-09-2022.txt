@@ -1,6 +1,6 @@
 ------------------------------------------------------------------ ' ' -------------------------------------------------------------------------------------
 
-CRIAR O NOME DA SUA EMPRESA: Oblivion Systems 
+                                NOME DA EMPRESA: Oblivion Systems 
 				NOME FANTASIA DA  EMPRESA: OSYS
 				SLOGAN DA EMPRESA: "Doing your business better"
 				LOCALIZAÇÃO DA EMPRESA: "Vila Prudente - Carimâ"
