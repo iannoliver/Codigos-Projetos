@@ -1,4 +1,4 @@
-Atividades/códigos da FMU e do Senac(sujeita a mudança)
+Atividades e códigos da FMU, Senac e Outros Cursos  
 
 ![ ](https://github.com/iannoliver/Codigos-Projetos/blob/main/VQaN.gif)
 
