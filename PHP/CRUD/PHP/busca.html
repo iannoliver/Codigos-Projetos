@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            background: linear-gradient(120deg, #3a1a05d8, #b90606da);
+            color: coral;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 20px;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+        input[type="submit"] {
+            background-color: #ffffff;
+            color: #292929;
+            font-weight: bold;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            color: coral;
+            background-color: black;
+        }
+
+        .back {
+            color: #ffffff;
+            background-color: #641c1c;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.2s;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back:hover {
+            color: coral;
+            background-color: black;
+        }
+    </style>
+<form action="busca.php">
+    <label for="RA">RA:</label>
+    <input type="text" name="RA"/>
+    <input type="submit" value="buscar"/>
+</form>  
+<br/>
+<a href="index.html"><button class="back">Voltar</button></a>
+</body>
+</html>

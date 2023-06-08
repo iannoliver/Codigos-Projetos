@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página inicial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+        
+        body {
+            background: linear-gradient(120deg, #3a1a05d8, #b90606da);
+            /*background-color: #292929;*/
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: coral;
+            text-align: center;
+            
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        a:hover {
+            color: coral;
+        }
+
+        .list {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .cad {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .erase {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Página inicial do CRUD:</h1>
+        <br>
+        <br>
+        <br>
+
+        <a href="lista.php" class="list">Lista</a>
+        <a href="cadastro.html" class="cad">Cadastro</a>
+        <a href="excluir.html" class="erase">Exclusão</a>
+        <a href="busca.html" class="search">Busca/Alteração</a>
+    </div>
+</body>
+</html>
