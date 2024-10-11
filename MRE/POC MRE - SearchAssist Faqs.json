@@ -1,0 +1,44 @@
+{
+    "faqs": [
+        {
+            "_id": "",
+            "_meta": {
+                "isFollowupQuestion": false,
+                "followupQuestionIds": []
+            },
+            "_source": {
+                "faq_question": "Questão 1",
+                "keywords": [],
+                "faq_answer": [
+                    {
+                        "text": "Resposta 1"
+                    }
+                ],
+                "faq_cond_answers": [],
+                "faq_alt_questions": [
+                    "questão alternativa 1"
+                ]
+            }
+        },
+        {
+            "_id": "",
+            "_meta": {
+                "isFollowupQuestion": false,
+                "followupQuestionIds": []
+            },
+            "_source": {
+                "faq_question": "Questão 2",
+                "keywords": [],
+                "faq_answer": [
+                    {
+                        "text": "Resposta 2"
+                    }
+                ],
+                "faq_cond_answers": [],
+                "faq_alt_questions": [
+                    "questão alternativa 2"
+                ]
+            }
+        }
+    ]
+}

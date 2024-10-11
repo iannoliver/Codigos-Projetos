@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+
+    <style>
+        body {
+            background: linear-gradient(120deg, #3a1a05d8, #b90606da);
+            /*background-color:  #292929;*/
+            color: coral;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+            contain: paint;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: darkslategray;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: coral;
+        }
+
+        .form-input {
+            margin-bottom: 10px; /* Adiciona espaçamento inferior aos inputs */
+        }
+
+        .submit-button {
+            background-color: darkslategray;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.2s;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .submit-button:hover {
+            color: coral;
+            background-color: black;
+        }
+
+        .back {
+            background-color: darkslategray;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.2s;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back:hover {
+            color: coral;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Funcionarios</h1>
+        <form action="cadastro.php" method="get">
+            RA:  <input class="form-input" type="text" name="RA"/><br/>
+            Nome:  <input class="form-input" type="text" name="Nome"/><br/>
+            Data de Nascimento:  <input class="form-input" type="date" name="DtNascimento"/><br/>
+            Salário:  <input class="form-input" type="text" name="Salario"/><br/>
+            <br><input class="submit-button" type="submit" value="Cadastrar"/>
+        </form>
+        <br/>
+        <a href="index.html"><button class="back">Voltar</button></a>
+    </div>
+</body>
+</html>
+    

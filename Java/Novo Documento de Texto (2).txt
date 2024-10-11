@@ -1,0 +1,58 @@
+-- Criar um jlabel com uma imagem de fotografia default para substituição por outra imagem pelo metodo a seguir:
+
+private void carregarFoto() {
+	JFileChooser jfc = new JFileChooser();
+	jfc.setDialogTitle("Selecionar Arquivo")
+	jfc.setFileFilte(new FileNameExtensionFilter("Arquivo de Imagens(*.PNG, *JPG, *JPEG, "png","jpg", "jpeg")"));
+	jfc.showOpenDialog(this);
+		
+}
+
+-- Agora após a instancia do DAO (DAO dao = new DAO())
+
+private FileInputStream fis;
+
+-- Depois criar uma variável global
+
+private int tamanho;
+
+-- Após isso criar uma variável do tipo INT
+
+private void carregarFoto() {
+	JFileChooser jfc = new JFileChooser();
+	jfc.setDialogTitle("Selecionar Arquivo")
+	jfc.setFileFilte(new FileNameExtensionFilter("Arquivo de Imagens(*.PNG, *JPG, *JPEG, "png","jpg", "jpeg")"));
+	int resultado = jfc.showOpenDialog(this);
+	if(resultado == JFileChooser.APPROVE_OPTION) {
+	try{
+		fis = new FileInputStream(jfc.getSelectedFile());
+		tamanho = (int) jfc.getSelectedFile().lenght();
+		Image foto = ImageIO.read(jfc.getSelectedFile()).getScaledInstance(lblFoto.getWidth(), lblFoto.getHeight, image.SCALE_SMOOTH);
+	} catch (Exception e) {
+		System.out.println(e);
+	}
+    }
+		
+}  
+
+-- Proxima etapa registrar imagem no banco de dados JDBC
+-- Criar um botão para adicionar um novo método
+
+private void adicionarFoto() {
+	String insert = "insert into produtos(//preencha as variaveis) values(?,?....)
+	try {
+		con = dao.conectar();
+		pst = con.preparedStatement(insert);
+		pst.setString(1, txtNome.getText());
+		pst.setBloob(2, fis, tamanho);
+		int confirma = pst.executeUpdate();
+		if (confirma == 1) {
+			JOptionPane.showMessageDialog(null, "Imagem cadastrado com sucesso");
+		} else {
+			JOptionPane.showMessageDialog(null, "Erro, imagem não cadastrada")
+		}
+		con.close();
+	} catch (Exception e) {
+		System.out.println(e);
+	}	
+}
