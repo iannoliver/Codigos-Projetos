@@ -1,0 +1,6 @@
+node_modules/
+**/node_modules/
+*.log
+.DS_Store
+.env
+ai-tool-generator/backend/tools.db
