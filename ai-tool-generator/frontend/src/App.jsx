@@ -1,70 +1,106 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import './index.css'
+import { useEffect, useMemo, useState } from "react";
+import Sidebar from "../components/Sidebar.jsx";
+import ChatWindow from "../components/ChatWindow.jsx";
 
-function App() {
-  const [description, setDescription] = useState('')
-  const [code, setCode] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [history, setHistory] = useState([])
+const API = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
-  const fetchHistory = async () => {
-    try {
-      const { data } = await axios.get('http://localhost:3001/tools')
-      setHistory(data)
-    } catch (e) {
-      console.error(e)
-    }
-  }
+export default function App() {
+  const [chats, setChats] = useState(() => {
+    // estado local de chats (mantém o que você já tinha)
+    const raw = localStorage.getItem("aitool_chats");
+    return raw ? JSON.parse(raw) : [];
+  });
+  const [activeId, setActiveId] = useState(() => {
+    const raw = localStorage.getItem("aitool_active");
+    return raw || null;
+  });
 
+  const active = useMemo(
+    () => chats.find((c) => c.id === activeId) || null,
+    [chats, activeId]
+  );
+
+  // persistência básica local
   useEffect(() => {
-    fetchHistory()
-  }, [])
+    localStorage.setItem("aitool_chats", JSON.stringify(chats));
+  }, [chats]);
+  useEffect(() => {
+    if (activeId) localStorage.setItem("aitool_active", activeId);
+  }, [activeId]);
 
-  const handleGenerate = async () => {
-    if (!description) return
-    setLoading(true)
-    try {
-      const { data } = await axios.post('http://localhost:3001/generate-tool', { description })
-      setCode(data.code)
-      fetchHistory()
-    } catch (e) {
-      alert('Erro ao gerar ferramenta')
-    } finally {
-      setLoading(false)
-    }
-  }
+  // ações simples (mantém seu fluxo)
+  const onCreateChat = (name = "Nova conversa") => {
+    const id = crypto.randomUUID();
+    const now = Date.now();
+    const chat = { id, name, createdAt: now, updatedAt: now, draft: "", messages: [] };
+    setChats((prev) => [chat, ...prev]);
+    setActiveId(id);
+  };
+  const onRenameChat = (id, name) => {
+    setChats((prev) => prev.map((c) => (c.id === id ? { ...c, name } : c)));
+  };
+  const onDeleteChat = (id) => {
+    setChats((prev) => prev.filter((c) => c.id !== id));
+    if (id === activeId) setActiveId(null);
+  };
+  const onSelect = (id) => setActiveId(id);
+
+  // helpers que o ChatWindow consome
+  const onDraftChange = (val) => {
+    if (!active) return;
+    setChats((prev) =>
+      prev.map((c) => (c.id === active.id ? { ...c, draft: val, updatedAt: Date.now() } : c))
+    );
+  };
+  const onPushMessage = (msg) => {
+    if (!active) return;
+    setChats((prev) =>
+      prev.map((c) =>
+        c.id === active.id
+          ? { ...c, messages: [...c.messages, msg], updatedAt: Date.now() }
+          : c
+      )
+    );
+  };
+  const onSetLastCode = (code) => {
+    if (!active) return;
+    setChats((prev) =>
+      prev.map((c) => (c.id === active.id ? { ...c, lastCode: code } : c))
+    );
+  };
 
   return (
-    <div className="min-h-screen p-4 bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4">AI Tool Generator</h1>
-      <textarea
-        className="w-full p-2 border rounded mb-2"
-        rows="4"
-        value={description}
-        onChange={e => setDescription(e.target.value)}
-        placeholder="Descreva a ferramenta"
-      />
-      <button
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-        onClick={handleGenerate}
-        disabled={loading}
-      >
-        {loading ? 'Gerando...' : 'Gerar'}
-      </button>
-      {code && (
-        <pre className="bg-white p-2 mt-4 overflow-auto border" style={{maxHeight:'300px'}}>
-{code}
-        </pre>
-      )}
-      <h2 className="text-xl font-semibold mt-6">Histórico</h2>
-      <ul className="list-disc pl-5">
-        {history.map(item => (
-          <li key={item.id}>{item.description} - {new Date(item.timestamp).toLocaleString()}</li>
-        ))}
-      </ul>
-    </div>
-  )
-}
+  <div className="h-screen w-screen overflow-hidden flex bg-soft text-[var(--text)]">
+    {/* LADO ESQUERDO (conversas) — com pontilhado */}
+    <aside className="w-80 min-w-72 max-w-80 h-full border-r border-out relative bg-grid flex-shrink-0">
+      {/* camada sólida para contraste do conteúdo */}
+      <div className="absolute inset-0 bg-[color-mix(in_srgb,var(--bg-soft)_85%,transparent)] pointer-events-none" />
+      <div className="relative h-full overflow-hidden">
+        <Sidebar
+          chats={chats}
+          activeId={activeId}
+          onSelect={onSelect}
+          onCreateChat={onCreateChat}
+          onRenameChat={onRenameChat}
+          onDeleteChat={onDeleteChat}
+        />
+      </div>
+    </aside>
 
-export default App
+    {/* ÁREA CENTRAL (tipo ChatGPT) */}
+    <main className="flex-1 h-full flex flex-col overflow-hidden">
+      {/* rolagem acontece só aqui */}
+      <div className="flex-1 overflow-y-auto">
+        <div className="max-w-3xl mx-auto w-full px-4 sm:px-6 md:px-8 py-6">
+          <ChatWindow
+            chat={active}
+            onDraftChange={onDraftChange}
+            onPushMessage={onPushMessage}
+            onSetLastCode={onSetLastCode}
+          />
+        </div>
+      </div>
+    </main>
+  </div>
+  );
+}

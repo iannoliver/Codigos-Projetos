@@ -1,3 +1,114 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* =========================
+   Paleta (CSS variables)
+   ========================= */
+:root {
+  color-scheme: dark;
+
+  /* cores base */
+  --bg:        #0b1023;
+  --bg-soft:   #0e1630;
+
+  /* painel e bordas em RGB p/ alpha fácil */
+  --panel-rgb: 17, 25, 54;     /* #111936 */
+  --outline:   #243056;        /* borda fria azulada */
+
+  /* texto */
+  --text:      #d8dcef;
+  --text-mute: #8a93b5;
+
+  /* primárias e acentos */
+  --indigo-500: #6366f1;
+  --indigo-600: #5852e0;
+  --indigo-700: #4f46e5;
+  --violet-500: #8b5cf6;
+  --violet-600: #7c3aed;
+  --violet-700: #6d28d9;
+}
+
+/* reset básico */
+* { -webkit-tap-highlight-color: transparent; }
+html, body, #root { height: 100%; }
+body { background: var(--bg); color: var(--text); }
+
+/* scrollbars discretas */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b35a3 transparent;
+}
+*::-webkit-scrollbar { height: 10px; width: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #463eb8, var(--violet-600));
+  border-radius: 999px;
+}
+
+/* =========================
+   Helpers de UI (sem @apply)
+   ========================= */
+
+/* Cartões */
+.card {
+  border-radius: 0.75rem;                  /* ~ rounded-xl */
+  background-color: rgba(var(--panel-rgb), 0.9);
+  border: 1px solid var(--outline);
+  box-shadow:
+    0 8px 24px rgba(20,24,60,0.45),
+    0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Botão primário com gradiente roxo/azul */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;                  /* ~ rounded-lg */
+  padding: 0.5rem 1rem;                   /* ~ px-4 py-2 */
+  font-weight: 600;                        /* ~ font-medium */
+  color: #fff;
+  background-image: linear-gradient(135deg, var(--indigo-600), var(--violet-600));
+  transition: filter .15s ease, transform .02s ease;
+  box-shadow:
+    0 0 0 2px rgba(99,102,241,0.25),
+    0 0 24px rgba(139,92,246,0.25);
+  user-select: none;
+}
+.btn-primary:hover {
+  background-image: linear-gradient(135deg, var(--indigo-500), var(--violet-600));
+}
+.btn-primary:active { filter: brightness(0.95); }
+
+/* Inputs */
+.input {
+  width: 100%;
+  border-radius: 0.5rem;                  /* ~ rounded-lg */
+  padding: 0.5rem 0.75rem;                /* ~ px-3 py-2 */
+  font-size: 0.875rem;                    /* ~ text-sm */
+  line-height: 1.25rem;
+  background-color: rgba(var(--panel-rgb), 0.7);
+  border: 1px solid var(--outline);
+  color: var(--text);
+  outline: none;
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+.input::placeholder {
+  color: color-mix(in srgb, var(--text-mute) 70%, transparent);
+}
+.input:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--indigo-600) 40%, transparent);
+  border-color: color-mix(in srgb, var(--indigo-600) 50%, var(--outline));
+}
+
+/* Utilitários simples que você pode usar no JSX */
+.bg-soft   { background: var(--bg-soft); }
+.text-mute { color: var(--text-mute); }
+.border-out{ border-color: var(--outline); }
+
+/* Fundo pontilhado sutil (opcional) */
+.bg-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(124,58,237,0.15) 1px, transparent 0);
+  background-size: 24px 24px;
+}
