@@ -1,0 +1,140 @@
+/* ---------- Reset e base ---------- */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f1123;
+  color: white;
+  min-height: 100vh;
+}
+
+/* ---------- App container ---------- */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ---------- Navbar fixa no topo ---------- */
+.navbar {
+  width: 100%;
+  background: #1a1c3b;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-btn {
+  padding: 0.4rem 1rem;
+  background: #646cff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background: #535bf2;
+}
+
+/* ---------- Login centralizado ---------- */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.login input {
+  width: 250px;
+  padding: 0.6rem;
+  margin: 0.4rem 0;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background-color: #181a30;
+  color: white;
+}
+
+.login button {
+  background-color: #646cff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.login button:hover {
+  background-color: #4b52e1;
+}
+
+/* ---------- Conteúdo centralizado ---------- */
+.content {
+  flex: 1;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ---------- Tabela estilizada ---------- */
+.requests-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+
+.requests-table th,
+.requests-table td {
+  border: 1px solid #444;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.requests-table th {
+  background-color: #22244c;
+  color: #fff;
+}
+
+.requests-table tr:nth-child(even) {
+  background-color: #1b1c38;
+}
+
+.status.created {
+  color: orange;
+  font-weight: bold;
+}
+.status.approved {
+  color: #00c853;
+  font-weight: bold;
+}
+.status.rejected {
+  color: crimson;
+  font-weight: bold;
+}
